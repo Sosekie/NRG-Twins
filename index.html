@@ -185,9 +185,12 @@ footer { border-top: 1px solid var(--rule); padding-top: 20px; font-size: 0.85re
     <span class="btn soon" aria-disabled="true">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 3H6a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V8z"/><path d="M14 3v5h5"/></svg>
       Paper <small>arXiv soon</small></span>
-    <a class="btn" href="https://huggingface.co/datasets/cvg-unibe/NRG-Twins" target="_blank" rel="noopener">
+    <a class="btn" href="https://huggingface.co/datasets/ChenruiFan220617/NRG-Twins" target="_blank" rel="noopener">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5"/><path d="M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></svg>
       Dataset</a>
+    <a class="btn" href="https://huggingface.co/ChenruiFan220617/NRG-PD" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6v6H9z"/></svg>
+      Weights</a>
     <a class="btn" href="https://github.com/Sosekie/NRG-Twins" target="_blank" rel="noopener">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m8 7-5 5 5 5M16 7l5 5-5 5"/></svg>
       Code</a>
@@ -434,7 +437,7 @@ footer { border-top: 1px solid var(--rule); padding-top: 20px; font-size: 0.85re
     <h2 id="download">Download and use</h2>
     <p>Each <span class="mono">{train,val,test}/&lt;source_id&gt;/</span> folder holds <span class="mono">real.mp4</span>, <span class="mono">twin.mp4</span>, <span class="mono">cameras.npz</span>, <span class="mono">labels.npz</span> and <span class="mono">depth.npz</span>. An extended tier, <span class="mono">full_truth/</span> (70,551 per-frame archives, about 972 GB), adds the intermediates behind every label: consensus flow, the projected real reference, rigid projections, masks and reason codes. The base tier is enough to train and evaluate detectors.</p>
     <div class="codehead"><span class="eyebrow">Base tier only</span><button class="copy" type="button" data-copy="cmd-dl">Copy</button></div>
-    <pre id="cmd-dl">huggingface-cli download cvg-unibe/NRG-Twins --repo-type dataset \
+    <pre id="cmd-dl">huggingface-cli download ChenruiFan220617/NRG-Twins --repo-type dataset \
   --exclude "full_truth/*" --local-dir NRG-Twins
 python NRG-Twins/code/load_example.py NRG-Twins train</pre>
     <dl class="license">

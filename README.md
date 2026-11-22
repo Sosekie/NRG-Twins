@@ -12,7 +12,8 @@ pixel from the generated video alone.
 
 - Dataset (871 twins, labels, cameras, depth): https://huggingface.co/datasets/cvg-unibe/NRG-Twins
 - NRG-PD weights (three training seeds): https://huggingface.co/cvg-unibe/NRG-PD
-- Project page and paper: links will be added here.
+- Project page: https://sosekie.github.io/NRG-Twins/
+- Paper: link will be added here.
 
 ## Install
 

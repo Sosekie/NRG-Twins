@@ -10,8 +10,8 @@ this per pixel. A real RealEstate10K clip is re-created by a keyframe-conditione
 along the twin's camera path and where it actually appears. **NRG-PD** predicts this angle for every
 pixel from the generated video alone.
 
-- Dataset (871 twins, labels, cameras, depth): https://huggingface.co/datasets/cvg-unibe/NRG-Twins
-- NRG-PD weights (three training seeds): https://huggingface.co/cvg-unibe/NRG-PD
+- Dataset (871 twins, labels, cameras, depth): https://huggingface.co/datasets/ChenruiFan220617/NRG-Twins
+- NRG-PD weights (three training seeds): https://huggingface.co/ChenruiFan220617/NRG-PD
 - Project page: https://sosekie.github.io/NRG-Twins/
 - Paper: link will be added here.
 
@@ -27,7 +27,7 @@ local `model.safetensors` with `--vggt-weights`.
 ## Run NRG-PD on a video
 
 ```sh
-huggingface-cli download cvg-unibe/NRG-PD --local-dir weights
+huggingface-cli download ChenruiFan220617/NRG-PD --local-dir weights
 python -m nrgpd.infer my_video.mp4 --weights weights/nrgpd_seed20261108.safetensors --out pred.npz
 ```
 
@@ -38,7 +38,7 @@ by 24-frame windows (81 frames: windows starting at frames 0, 19, 38 and 57).
 ## Evaluate on the test split
 
 ```sh
-huggingface-cli download cvg-unibe/NRG-Twins --repo-type dataset --exclude "full_truth/*" --local-dir NRG-Twins
+huggingface-cli download ChenruiFan220617/NRG-Twins --repo-type dataset --exclude "full_truth/*" --local-dir NRG-Twins
 for id in $(cat evaluation/test_benchmark.txt); do
   python -m nrgpd.infer NRG-Twins/test/$id/twin.mp4 --weights weights/nrgpd_seed20261108.safetensors --out preds/$id.npz
 done

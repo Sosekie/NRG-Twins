@@ -7,7 +7,7 @@
 <meta name="description" content="NRG-Twins: per-pixel ground truth, in degrees, for rigidity violations in generated video, and NRG-PD, a detector that predicts it from RGB alone.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..100,500..800&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>
 /* Layout: one 1040px column; everything shares its left edge. Text and captions stop at a readable measure; figures, videos and tables use the full column. */
 :root {
@@ -23,12 +23,12 @@
   --ours: #fbeceb;
   --kf: #1eaa5a;          /* keyframe border in the videos */
   --nolabel: #cdcdcd;
-  --font-display: "Archivo", "Helvetica Neue", Arial, sans-serif;
-  --font-body: "IBM Plex Sans", "Segoe UI", Roboto, Arial, sans-serif;
+  --font-display: "Noto Sans", "Segoe UI", Roboto, Arial, sans-serif;
+  --font-body: "Noto Sans", "Segoe UI", Roboto, Arial, sans-serif;
   --font-mono: "IBM Plex Mono", ui-monospace, "Cascadia Mono", Consolas, monospace;
   --scale: linear-gradient(90deg, #fff5be 0%, #fec44f 25%, #f46d43 50%, #c81e1e 75%, #6e000a 100%);
   --text: 70ch;
-  --wide: 1040px;
+  --wide: 900px;
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
@@ -162,6 +162,29 @@ dl.license dt { color: var(--muted); }
 dl.license dd { margin: 0; min-width: 0; }
 footer { border-top: 1px solid var(--rule); padding-top: 20px; font-size: 0.85rem; color: var(--muted); }
 
+
+/* ---- centred single-column layout (academic project page) ---- */
+.text { max-width: none; }
+.section > .text > h2, .section h2 { text-align: center; }
+#abstract ~ p { text-align: justify; hyphens: auto; }
+h1 { font-size: clamp(2.4rem, 1.6rem + 3vw, 3.6rem); font-weight: 700; font-stretch: normal; letter-spacing: -0.01em; line-height: 1.05; }
+.subtitle { font-weight: 500; font-stretch: normal; max-width: 44ch; font-size: clamp(1.15rem, 1rem + 0.8vw, 1.45rem); }
+h2 { font-weight: 700; font-stretch: normal; font-size: clamp(1.5rem, 1.2rem + 1vw, 1.9rem); }
+header.hero { padding-top: 64px; gap: 18px; }
+.authors { font-size: 1.1rem; }
+.btn { font-weight: 500; }
+.btn small { font-family: var(--font-body); }
+.fig-narrow { display: flex; flex-direction: column; gap: 12px; }
+.fig-narrow > .plate { max-width: 720px; width: 100%; margin-inline: auto; }
+figcaption, .fig-narrow figcaption, .tnote { max-width: none; }
+.two { display: flex; flex-direction: column; gap: 22px; }
+.two > figure { max-width: 620px; margin-inline: auto; width: 100%; }
+.panel-heads, .pick .meta, .legend .ticks, thead th, tr.sep td, .eyebrow { font-family: var(--font-body); letter-spacing: 0; text-transform: none; }
+thead th { font-size: 0.82rem; font-weight: 600; white-space: nowrap; }
+.fact .v { font-stretch: normal; font-size: 1.7rem; }
+.facts { grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); }
+.wrap { gap: 72px; }
+
 @media (max-width: 560px) {
   body { font-size: 16px; }
   .panel-heads { font-size: 0.7rem; }
@@ -176,10 +199,6 @@ footer { border-top: 1px solid var(--rule); padding-top: 20px; font-size: 0.85re
 <div class="wrap">
 
 <header class="hero">
-  <div class="scale-strip" aria-hidden="true">
-    <div class="bar"></div>
-    <div class="ticks"><span>0°</span><span>0.25°</span><span>0.5°</span><span>0.75°</span><span>≥1°</span></div>
-  </div>
   <h1>NRG-Twins</h1>
   <p class="subtitle">Pixel-Level Ground Truth for Rigidity Violations in Generated Videos</p>
   <div class="authors">

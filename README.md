@@ -13,7 +13,7 @@ pixel from the generated video alone.
 - Dataset (871 twins, labels, cameras, depth): https://huggingface.co/datasets/ChenruiFan220617/NRG-Twins
 - NRG-PD weights (three training seeds): https://huggingface.co/ChenruiFan220617/NRG-PD
 - Project page: https://sosekie.github.io/NRG-Twins/
-- Paper: link will be added here.
+- Paper: https://arxiv.org/abs/2611.32431
 
 ## Install
 
@@ -112,4 +112,14 @@ licenses ([THIRD_PARTY.md](THIRD_PARTY.md)).
 
 ## Citation
 
-A BibTeX entry will be added with the paper link.
+```bibtex
+@misc{fan2026nrgtwins,
+  title         = {{NRG-Twins}: Pixel-Level Ground Truth for Rigidity Violations in Generated Videos},
+  author        = {Fan, Chenrui and Hu, Qiyang and Scharr, Luca and Favaro, Paolo},
+  year          = {2026},
+  eprint        = {2611.32431},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.CV},
+  url           = {https://arxiv.org/abs/2611.32431}
+}
+```
